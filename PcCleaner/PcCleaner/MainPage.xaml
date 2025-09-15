@@ -1,10 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PcCleaner.MainPage">
+             x:Class="PcCleaner.MainPage"
+             BackgroundColor="White">
 
-    <ScrollView>
+    <!-- 3 lignes: header (initial 100), contenu (*), footer (initial 60)
+         2 colonnes: menu gauche (initial 96px), contenu (*) -->
+    <Grid Padding="0">
+        <Grid.RowDefinitions>
+            <RowDefinition x:Name="HeaderRow" Height="100" />
+            <RowDefinition Height="*" />
+            <RowDefinition x:Name="FooterRow" Height="60" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="LeftCol" Width="96" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
 
-    </ScrollView>
+        <!-- Header -->
+        <Border Grid.Row="0" Grid.ColumnSpan="2"
+                BackgroundColor="#444"
+                StrokeThickness="0" />
+        <!-- pas de liseré -->
 
+        <!-- Menu gauche -->
+        <Border Grid.Row="1" Grid.Column="0"
+                BackgroundColor="#666"
+                StrokeThickness="0" />
+
+        <!-- Zone centrale -->
+        <Border Grid.Row="1" Grid.Column="1"
+                BackgroundColor="White"
+                StrokeThickness="0">
+            <!-- place ici ton contenu principal -->
+        </Border>
+
+        <!-- Footer -->
+        <Border Grid.Row="2" Grid.ColumnSpan="2"
+                BackgroundColor="#333"
+                StrokeThickness="0"
+                Padding="0">
+            <Label Text="PC Cleaner"
+                   TextColor="White"
+                   HorizontalOptions="End"
+                   VerticalOptions="Center"
+                   Margin="0,0,12,0"
+                   TextDecorations="Underline" />
+        </Border>
+    </Grid>
 </ContentPage>
