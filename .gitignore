@@ -1,10 +1,161 @@
-# VS / C#
+# =========================
+# Visual Studio
+# =========================
 .vs/
-**/bin/
-**/obj/
 *.user
 *.suo
 *.userosscache
 *.sln.docstates
-*.VC.db
-*.VC.opendb
+
+# =========================
+# Build results
+# =========================
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# =========================
+# .NET
+# =========================
+*.dll
+*.exe
+*.app
+*.cache
+*.pdb
+*.mdb
+*.dbmdl
+*.bak
+
+# =========================
+# NuGet
+# =========================
+*.nupkg
+*.snupkg
+*.nuget.props
+*.nuget.targets
+packages/
+NuGet.Config
+
+# =========================
+# Rider / JetBrains
+# =========================
+.idea/
+*.sln.iml
+
+# =========================
+# VS Code
+# =========================
+.vscode/
+.history/
+
+# =========================
+# Others
+# =========================
+*.tmp
+*.temp
+*.swp
+*.log
+.DS_Store
+Thumbs.db
+
+# =========================
+# Azure / IIS / Publish
+# =========================
+.publish/
+*.Publish.xml
+*.pubxml
+*.publishproj
+
+# =========================
+# ----------- MAUI / Mobile -----------
+# Artifacts & stores
+# =========================
+# Android
+*.apk
+*.aab
+*.apks
+*.keystore
+*.jks
+keystore.properties
+.gradle/
+local.properties
+*.iml
+
+# iOS / macOS
+*.ipa
+*.dSYM
+**/*.dSYM/
+*.xcarchive
+*.xcscmblueprint
+*.xcuserstate
+*.xcodeproj/*.pbxuser
+*.xcodeproj/*.mode1v3
+*.xcodeproj/*.mode2v3
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcworkspace/xcuserdata/
+
+# Windows packages
+*.appx
+*.appxbundle
+*.msix
+*.msixbundle
+
+# =========================
+# Secrets & configs (sécurité)
+# =========================
+# Fichiers de conf .NET (ne versionner que des exemples)
+appsettings.json
+appsettings.*.json
+!appsettings.json.example
+!appsettings.Development.json.example
+
+# Firebase / Google services (Android & iOS)
+google-services.json
+GoogleService-Info.plist
+GoogleService-Info-debug.plist
+
+# App Center / autres configs sensibles
+appcenter-config.json
+
+# User secrets / dossiers "secrets"
+secrets.json
+*.secrets.json
+**/secrets/**
+
+# Environnements
+.env
+.env.*
+.envrc
+
+# Certificats / clés
+*.pfx
+*.p12
+*.snk
+*.pem
+*.key
+*.crt
+*.cer
+*.der
+*.keystore
+
+# Bases locales / backups
+*.mdf
+*.ldf
+*.sqlite
+*.sqlite3
+*.db
+*.bak
+*.dmp
+
+# Laisser passer les exemples de fichiers de config
+!**/*.example
+!**/*.sample
+!**/*.template
